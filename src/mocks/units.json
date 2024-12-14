@@ -1,0 +1,14 @@
+{
+  "metric": {
+    "temperature": "ºC",
+    "wind": "m/s"
+  },
+  "imperial": {
+    "temperature": "ºF",
+    "wind": "mile/h"
+  },
+  "standard": {
+    "temperature": "ºK",
+    "wind": "m/s"
+  }
+}
