@@ -1,9 +1,10 @@
 <script setup lang="ts">
-import weatherData from '@/mocks/weatherData.json';
 import WeatherTimelineItem from './WeatherTimelineItem.vue';
 import type { UnitType } from '@/types/UnitType';
+import type { WeatherType } from '@/types/WeatherType';
 
 type WeatherTimelinePropTypes = {
+  weatherData: WeatherType;
   unit: UnitType;
 };
 

@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import type { CurrentWeatherType } from '@/types/CurrentWeatherType';
 import { format } from 'date-fns';
+import CurrentWeatherCardDetail from './CurrentWeatherCardDetail.vue';
 
 type CurrentWeatherCardPropTypes = {
   currentWeather: CurrentWeatherType;
@@ -20,18 +21,15 @@ defineProps<CurrentWeatherCardPropTypes>();
         <h3>Real Feel: {{ Math.round(currentWeather.feels_like) }}ºC</h3>
       </div>
       <div class="w-full">
-        <div class="flex flex-row justify-between px-5 border-b-2 border-t-black">
-          <p>Wind</p>
+        <CurrentWeatherCardDetail detail-label="Wind">
           <p>{{ currentWeather.wind_deg }} {{ currentWeather.wind_speed }}</p>
-        </div>
-        <div class="flex flex-row justify-between px-5 border-b-2 border-t-black">
-          <p>Wind Gust</p>
+        </CurrentWeatherCardDetail>
+        <CurrentWeatherCardDetail detail-label="Wind Gust">
           <p>{{ currentWeather.wind_gust }}</p>
-        </div>
-        <div class="flex flex-row justify-between px-5 border-b-2 border-t-black">
-          <p>Air Quality</p>
+        </CurrentWeatherCardDetail>
+        <CurrentWeatherCardDetail detail-label="Air Quality">
           <p>{{ currentWeather.wind_gust }}</p>
-        </div>
+        </CurrentWeatherCardDetail>
       </div>
     </div>
   </div>
